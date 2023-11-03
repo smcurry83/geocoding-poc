@@ -2,16 +2,11 @@ function checkPointInSearchArea() {
   const searchAreaInput = document.getElementById('searchAreaInput').value;
   const pointInput = document.getElementById('pointInput').value;
   const resultElement = document.getElementById('result');
-
-  // Parse search area and point coordinates
   const polygonVertices = searchAreaInput.split('\n').map(line => {
       const [x, y] = line.split(',').map(coord => parseFloat(coord));
       return [x, y];
   });
-
   const [x, y] = pointInput.split(',').map(coord => parseFloat(coord));
-
-  // Perform the point-in-search area check
   const isInside = isPointInsideSearchArea(x, y, polygonVertices);
 
   if (isInside) {
@@ -22,7 +17,6 @@ function checkPointInSearchArea() {
 }
 
 function isPointInsideSearchArea(x, y, polygonVertices) {
-  // Same point-in-polygon code as previously shown
   let intersections = 0;
   const numVertices = polygonVertices.length;
 
@@ -34,14 +28,12 @@ function isPointInsideSearchArea(x, y, polygonVertices) {
           intersections++;
       }
   }
-
   return intersections % 2 === 1;
 }
 
 function flipCoordinates() {
     const inputTextArea = document.getElementById("flipInput");
-    const flippedOutput = document.getElementById("flippedOutput");
-    
+    const flippedOutput = document.getElementById("flippedOutput"); 
     const coordinates = inputTextArea.value.split('\n');
     const flippedCoordinates = [];
 
@@ -53,7 +45,5 @@ function flipCoordinates() {
             flippedCoordinates.push(`${x}, ${y}`);
         }
     }
-
-    // Display the flipped coordinates
     flippedOutput.innerHTML = flippedCoordinates.join('<br>');
 }
