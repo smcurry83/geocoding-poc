@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" text="text/css" href="./style.css"/>
+    <title>Geolocation Check - Proof of Concept</title>
+</head>
+<body>
+    <h1>Geolocation Check - Proof of Concept</h1>
+    <div><a href="./index.html">Home</a></div>
+    <div class="flex-container">
+        <div class="checkSection">
+            <div class="checkCriteria">
+                <h2>Enter list of lat, lon to flip:</h2>
+                <textarea id="flipInput" rows="10" cols="50">
+
+                </textarea>
+                <button onclick="flipCoordinates()">Flip</button>
+            </div>
+            <div class="results">
+                <h2>Flipped Coordinates:</h2>
+                <div id="flippedOutput">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+</html>

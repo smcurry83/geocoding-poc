@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" text="text/css" href="./style.css"/>
+    <title>Geolocation Check - Proof of Concept</title>
+</head>
+<body>
+    <h1>Geolocation Check - Proof of Concept</h1>
+    <a href="./index.html">Home</a>
+    <div class="flex-container">
+        <div class="checkSection">
+            <div class="checkCriteria">
+                <h2>Northern border search area:</h2>
+                <textarea id="searchAreaInput" rows="10" cols="50">
+47.4875130, -126.0791016
+47.4578085, -123.2666016
+48.2539411, -121.5966797
+48.2246726, -95.4052734
+47.8131545, -92.7246094
+47.3090342, -88.8574219
+46.8301336, -86.3964844
+45.7061793, -84.7705078
+44.3395652, -83.4960938
+42.7792754, -84.2871094
+41.5085773, -84.1992188
+41.2117215, -82.0898438
+41.8695608, -79.8046875
+42.6824354, -77.7392578
+43.2932003, -76.0693359
+44.3081267, -74.5312500
+44.6842774, -71.8945313
+44.8091217, -70.0927734
+45.9816952, -69.1259766
+46.6494362, -68.8183594
+45.8900082, -68.5546875
+44.8091217, -68.7744141
+43.3890819, -67.3242188
+43.6758181, -66.4013672
+44.1822040, -65.2587891
+45.5525253, -66.1376953
+46.8601910, -66.4453125
+47.6653874, -66.9726563
+47.9899217, -69.3457031
+47.3983492, -71.2792969
+46.2862239, -72.2021484
+45.6447682, -76.8603516
+44.5278428, -78.9257813
+43.6122168, -80.8593750
+45.7061793, -81.5625000
+47.1897125, -82.9248047
+48.0487099, -84.9023438
+49.0378679, -88.0664063
+49.2678046, -90.7031250
+49.9794878, -94.5703125
+50.0359737, -124.2773438
+49.4681241, -125.5078125
+48.6038576, -127.0019531
+47.4875130, -126.0791016
+                </textarea>
+            </div>
+            <div class="checkPoint">
+                <h2>Enter a location to see if it exists in the search area:</h2>
+                <input type="text" id="pointInput" placeholder="32.0220491, -113.4118652">
+                <button onclick="checkPointInSearchArea()">Check</button>
+
+                <p id="result"></p>
+            </div>
+        </div>
+        <div class="mapSection">
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

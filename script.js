@@ -37,3 +37,23 @@ function isPointInsideSearchArea(x, y, polygonVertices) {
 
   return intersections % 2 === 1;
 }
+
+function flipCoordinates() {
+    const inputTextArea = document.getElementById("flipInput");
+    const flippedOutput = document.getElementById("flippedOutput");
+    
+    const coordinates = inputTextArea.value.split('\n');
+    const flippedCoordinates = [];
+
+    for (const coordinate of coordinates) {
+        const parts = coordinate.trim().split(',');
+        if (parts.length === 2) {
+            const y = parseFloat(parts[0]);
+            const x = parseFloat(parts[1]);
+            flippedCoordinates.push(`${x}, ${y}`);
+        }
+    }
+
+    // Display the flipped coordinates
+    flippedOutput.innerHTML = flippedCoordinates.join('<br>');
+}
