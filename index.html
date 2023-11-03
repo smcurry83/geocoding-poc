@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" text="text/css" href="./style.css"/>
     <title>Geolocation Check - Proof of Concept</title>
 </head>
 <body>
     <h1>Geolocation Check - Proof of Concept</h1>
-
-    <h2>Enter list of lat, lon to create a search area:</h2>
-    <textarea id="searchAreaInput" rows="10" cols="50">
+    <div class="flex-container">
+        <div class="checkSection">
+            <div class="checkCriteria">
+                <h2>Enter list of lat, lon to create a search area:</h2>
+                <textarea id="searchAreaInput" rows="10" cols="50">
 32.6393749, -117.2570801
 32.3335589, -117.1911621
 32.4170663, -115.0708008
@@ -86,14 +91,19 @@
 32.7410822, -114.5379639
 32.8334428, -114.6697998
 32.6393749, -117.2570801
-    </textarea>
+                </textarea>
+            </div>
+            <div class="checkPoint">
+                <h2>Enter a location to see if it exists in the search area:</h2>
+                <input type="text" id="pointInput" placeholder="32.0220491, -113.4118652">
+                <button onclick="checkPointInSearchArea()">Check</button>
 
-    <h2>Enter a location to see if it exists in the search area:</h2>
-    <input type="text" id="pointInput" placeholder="32.0220491, -113.4118652">
-    <button onclick="checkPointInSearchArea()">Check</button>
-
-    <p id="result"></p>
-
+                <p id="result"></p>
+            </div>
+        </div>
+        <div class="mapSection">
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
